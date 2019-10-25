@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\vcjon\Desktop\AMS2\M7_Interficies\UF1\.metadata\.plugins\org.eclipse.jdt.core
+1488904035.index
+3431452437.index
+23306892.index
