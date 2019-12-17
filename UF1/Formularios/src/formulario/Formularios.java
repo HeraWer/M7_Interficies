@@ -75,7 +75,7 @@ public class Formularios extends JFrame {
 		getContentPane().add(lblNombre);
 
 		textArea = new JTextArea();
-		textArea.setBounds(103, 34, 134, 22);
+		textArea.setBounds(103, 35, 134, 22);
 		getContentPane().add(textArea);
 
 		lblCiudad = new JLabel("Ciudad:");

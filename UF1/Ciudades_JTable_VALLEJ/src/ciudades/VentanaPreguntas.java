@@ -120,14 +120,14 @@ public class VentanaPreguntas extends JDialog implements ActionListener {
 		datosIntercambio.nombre = txtNombre.getText();
 		datosIntercambio.provincia = txtComarca.getText();
 		try {
-			datosIntercambio.habitantes = Integer.parseInt(txtHabitantes.getText());
+			datosIntercambio.habitantes = Float.parseFloat(txtHabitantes.getText());
 		} catch (NumberFormatException nfe) {
-			datosIntercambio.habitantes = 0;
+			datosIntercambio.habitantes = 0.0f;
 		}
 		try {
-			datosIntercambio.metro2 = Integer.parseInt(txtMetros2.getText());
+			datosIntercambio.metro2 = Float.parseFloat(txtMetros2.getText());
 		} catch (NumberFormatException nfe) {
-			datosIntercambio.metro2 = 0;
+			datosIntercambio.metro2 = 0.0f;
 		}
 		this.dispose();
 	}

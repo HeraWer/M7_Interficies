@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.Arrays;
 
 import javax.swing.JFrame;
@@ -79,7 +80,12 @@ public class Lista_alumno extends JFrame {
 		JButton btnEliminarAlumnoSeleccionado = new JButton("Eliminar alumno seleccionado");
 		btnEliminarAlumnoSeleccionado.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+			
+				try {
 				mAlumnos.remove(listAlumnos.getSelectedIndex());
+				}catch(Exception eRemove) {
+					mMatriculados.remove(listMatriculados.getSelectedIndex());
+				}
 			}
 		});
 		

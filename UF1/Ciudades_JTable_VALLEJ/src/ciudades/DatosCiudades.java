@@ -4,11 +4,11 @@ public class DatosCiudades {
 	
 	public String nombre="";
 	public String provincia="";
-	public int habitantes;
-	public int metro2;
+	public Float habitantes;
+	public Float metro2;
 	
 	// Constructos de datos ciudades.
-	public DatosCiudades(String nombre, String provincia, int habitantes, int metro2) {
+	public DatosCiudades(String nombre, String provincia, Float habitantes, Float metro2) {
 		this.nombre=nombre;
 		this.provincia=provincia;
 		this.habitantes=habitantes;
