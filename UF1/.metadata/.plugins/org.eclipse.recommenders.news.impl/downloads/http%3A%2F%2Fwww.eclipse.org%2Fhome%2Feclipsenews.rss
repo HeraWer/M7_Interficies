@@ -10,6 +10,46 @@
       <link>http://www.eclipse.org</link>
     </image>
     <item>
+      <title><![CDATA[The Eclipse Foundation Announces the CN4J Day 2020 Event for Building Enterprise Java on Kubernetes]]></title>
+      <link><![CDATA[https://jakarta.ee/news/announcements/2020/01/28/the-eclipse-foundation-announces-the-cn4j-day-2020-event-for-building-enterprise-java-on-kubernetes/]]></link>
+      <description><![CDATA[Today the Eclipse Foundation announced the launch of the Cloud Native for Java (CN4J) Day event, a full-day of expert talks, demos, and thought-provoking sessions focused on enterprise applications implemented using open source vendor-neutral Jakarta EE (successor of Java EE) and Eclipse MicroProfile specifications on Kubernetes.]]></description>
+      <pubDate>Tue, 28 Jan 2020 8:00:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+    <item>
+      <title><![CDATA[Moving Forward With Jakarta EE 9]]></title>
+      <link><![CDATA[https://blogs.eclipse.org/post/mike-milinkovich/moving-forward-jakarta-ee-9]]></link>
+      <description><![CDATA[On behalf of the Jakarta EE Working Group, we are excited to announce the unanimous approval of the plan for Jakarta EE 9, with an anticipated mid-2020 release.]]></description>
+      <pubDate>Mon, 20 Jan 2020 10:45:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+    <item>
+      <title><![CDATA[The realities of running an open-source community]]></title>
+      <link><![CDATA[https://sdtimes.com/open-source/the-realities-of-running-an-open-source-community/]]></link>
+      <description><![CDATA[The benefits of using open-source software is immeasurable, but it’s not the code itself that makes open-source software an invaluable resource.]]></description>
+      <pubDate>Thu, 9 Jan 2020 09:45:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+    <item>
+      <title><![CDATA[Eclipse Foundation’s New Bylaws Are in Effect]]></title>
+      <link><![CDATA[https://www.eclipse.org/org/press-release/20200107-bylaws_release_3.php]]></link>
+      <description><![CDATA[We are pleased to announce the Eclipse Foundation’s new Bylaws went into effect on January 1, 2020.]]></description>
+      <pubDate>Tue, 7 Jan 2020 09:45:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>1</pressrelease>
+    </item>
+    <item>
+      <title><![CDATA[Close to the Edge]]></title>
+      <link><![CDATA[https://blogs.eclipse.org/post/mike-milinkovich/close-edge]]></link>
+      <description><![CDATA[Today we are launching our new Edge Native Working Group to help drive the industry platform for edge computing.]]></description>
+      <pubDate>Tue, 17 Dec 2019 9:00:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+    <item>
       <title><![CDATA[The Eclipse Foundation Launches the Edge Native Working Group to Deliver Production-Grade Code for Open Source Edge Computing]]></title>
       <link><![CDATA[https://www.globenewswire.com/news-release/2019/12/10/1958428/0/en/The-Eclipse-Foundation-Launches-the-Edge-Native-Working-Group-to-Deliver-Production-Grade-Code-for-Open-Source-Edge-Computing.html]]></link>
       <description><![CDATA[The Eclipse Foundation today announced the launch of the Edge Native Working Group, a vendor-neutral and code-first industry collaboration that will drive the evolution and broad adoption of open source software for edge computing.]]></description>
