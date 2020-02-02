@@ -2,79 +2,117 @@ package controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-
-import clases.Employee;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
-public class MenuController implements Initializable{
+public class MenuController implements Initializable {
 
-	ObservableList<Employee> obserListEmployee = FXCollections.observableArrayList();
-	
 	@FXML
-	private ListView<Employee> employeeListView;
-	
-	@FXML
-	private Label employeeLabel;
-	
-	@FXML
-	private Button addButtonEmployee;
-	
-	@FXML
-	private TextField employeeNameTextField, employeePositionTextField;
-	
+	private Button orderButton, stockButton, boxButton, logoutButton;
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
-		chargeEmployee();
+
+		orderButton = new Button();
+		orderButton.setOnMouseClicked(new EventHandler<Event>() {
+
+			@Override
+			public void handle(Event event) {
+				// TODO Auto-generated method stub
+				changeWindowOrder(event);
+			}
+		});
+
+		stockButton = new Button();
+		stockButton.setOnMouseClicked(new EventHandler<Event>() {
+
+			@Override
+			public void handle(Event event) {
+				// TODO Auto-generated method stub
+				changeWindowStock(event);
+			}
+		});
+
+		boxButton = new Button();
+		boxButton.setOnMouseClicked(new EventHandler<Event>() {
+
+			@Override
+			public void handle(Event event) {
+				// TODO Auto-generated method stub
+				changeWindowBox(event);
+			}
+		});
+
+		logoutButton = new Button();
+		logoutButton.setOnMouseClicked(new EventHandler<Event>() {
+
+			@Override
+			public void handle(Event event) {
+				// TODO Auto-generated method stub
+				changeWindowLogout(event);
+			}
+		});
 	}
-	
-	public void chargeEmployee() {
-		
-		obserListEmployee.clear();
-		
-		Employee e = new Employee();
-		e = new Employee(1, "Jonatan", "Vendedor");
-		obserListEmployee.add(e);
-		e = new Employee(2, "Sergio", "Vendedor");
-		obserListEmployee.add(e);
-		e = new Employee(3, "Adrian", "Vendedor");
-		obserListEmployee.add(e);
-		e = new Employee(4, "Julio", "Encargado");
-		obserListEmployee.add(e);
-		e = new Employee(5, "Antonio", "Repartidor");
-		obserListEmployee.add(e);
-		e = new Employee(6, "Juan Carlos", "Cocinero");
-		obserListEmployee.add(e);
-		e = new Employee(7, "Marc", "Repartidor");
-		obserListEmployee.add(e);
-		e = new Employee(8, "Daniel", "Cocinero");
-		obserListEmployee.add(e);
-		e = new Employee(9, "Erik", "Encargado");
-		obserListEmployee.add(e);
-		e = new Employee(10, "Lidia", "Cocinera");
-		obserListEmployee.add(e);
-		e = new Employee(11, "Susana", "Repartidora");
-		obserListEmployee.add(e);
-		e = new Employee(12, "Angela", "Encargada");
-		obserListEmployee.add(e);
-		employeeListView.getItems().addAll(obserListEmployee);
-		
+
+	public void changeWindowOrder(Event event) {
+
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("../views/Orders.fxml"));
+			Scene scene = new Scene(root, 720, 520);
+			Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+			primaryStage.setScene(scene);
+			primaryStage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
-	
-	public void addEmployee() {
-		int id = obserListEmployee.size() + 1;
-		obserListEmployee.clear();
-		Employee e = new Employee(id, employeeNameTextField.getText(), employeePositionTextField.getText());
-		obserListEmployee.add(e);
-		employeeListView.getItems().addAll(obserListEmployee);
-		
+
+	public void changeWindowStock(Event event) {
+
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("../views/Stock.fxml"));
+			Scene scene = new Scene(root, 720, 520);
+			Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+			primaryStage.setScene(scene);
+			primaryStage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void changeWindowBox(Event event) {
+
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("../views/Box.fxml"));
+			Scene scene = new Scene(root, 720, 520);
+			Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+			primaryStage.setScene(scene);
+			primaryStage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void changeWindowLogout(Event event) {
+
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("../views/Login.fxml"));
+			Scene scene = new Scene(root, 720, 520);
+			Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+			primaryStage.setScene(scene);
+			primaryStage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }

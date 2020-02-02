@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="520.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+   <children>
+      <ListView fx:id="employeeListView" layoutX="74.0" layoutY="97.0" prefHeight="124.0" prefWidth="560.0" />
+      <Label fx:id="employeeLabel" layoutX="313.0" layoutY="43.0" prefHeight="37.0" prefWidth="94.0" text="Empleados">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Button fx:id="addButtonEmployee" layoutX="440.0" layoutY="248.0" mnemonicParsing="false" onMouseClicked="#addEmployee" prefHeight="25.0" prefWidth="194.0" text="Añadir Empleado" />
+      <TextField fx:id="employeeNameTextField" layoutX="74.0" layoutY="248.0" prefHeight="25.0" prefWidth="110.0" />
+      <TextField fx:id="employeePositionTextField" layoutX="194.0" layoutY="248.0" prefHeight="25.0" prefWidth="94.0" />
+      <Label layoutX="74.0" layoutY="231.0" prefHeight="17.0" prefWidth="76.0" text="Nombre" />
+      <Label layoutX="196.0" layoutY="231.0" text="Puesto" />
+      <Button fx:id="sendPasswordButton" layoutX="280.0" layoutY="384.0" mnemonicParsing="false" onMouseClicked="#changeWindow" prefHeight="25.0" prefWidth="149.0" text="Enviar" />
+      <TextField fx:id="sendPasswordTextField" layoutX="280.0" layoutY="345.0" promptText="Contraseña" />
+      <TextField fx:id="employeePasswordTextField" layoutX="296.0" layoutY="248.0" prefHeight="25.0" prefWidth="100.0" />
+      <Label layoutX="296.0" layoutY="231.0" text="Contraseña" />
+   </children>
+</AnchorPane>

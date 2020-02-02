@@ -8,11 +8,11 @@ public class Pizza {
 	private String name;
 	private ArrayList<Ingredients> ingredients;
 	private String mass;
-	private String size;
+	private int size;
 	private Double price;
 	private int stock;
 
-	public Pizza(int id, String name, ArrayList<Ingredients> ingredients, String mass, String size, Double price,
+	public Pizza(int id, String name, ArrayList<Ingredients> ingredients, String mass, int size, Double price,
 			int stock) {
 		super();
 		this.id = id;
@@ -62,6 +62,26 @@ public class Pizza {
 
 	public void setStock(int stock) {
 		this.stock = stock;
+	}
+
+	public String getMass() {
+		return mass;
+	}
+
+	public void setMass(String mass) {
+		this.mass = mass;
+	}
+
+	public int getSize() {
+		return size;
+	}
+
+	public void setSize(int size) {
+		this.size = size;
+	}
+
+	public String getName() {
+		return name;
 	}
 
 }

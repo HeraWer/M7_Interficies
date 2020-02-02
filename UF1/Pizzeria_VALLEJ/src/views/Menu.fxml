@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
@@ -7,12 +8,25 @@
 
 <AnchorPane prefHeight="520.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuController">
    <children>
-      <ListView fx:id="employeeListView" layoutX="74.0" layoutY="97.0" prefHeight="124.0" prefWidth="560.0" />
-      <Label fx:id="employeeLabel" layoutX="328.0" layoutY="36.0" prefHeight="37.0" prefWidth="64.0" text="Empleados" />
-      <Button fx:id="addButtonEmployee" layoutX="440.0" layoutY="248.0" mnemonicParsing="false" onMouseClicked="#addEmployee" prefHeight="25.0" prefWidth="194.0" text="Añadir Empleado" />
-      <TextField fx:id="employeeNameTextField" layoutX="74.0" layoutY="248.0" />
-      <TextField fx:id="employeePositionTextField" layoutX="254.0" layoutY="248.0" />
-      <Label layoutX="74.0" layoutY="231.0" prefHeight="17.0" prefWidth="76.0" text="Nombre" />
-      <Label layoutX="254.0" layoutY="231.0" text="Puesto" />
+      <Button fx:id="orderButton" layoutX="120.0" layoutY="88.0" mnemonicParsing="false" onMouseClicked="#changeWindowOrder" prefHeight="112.0" prefWidth="153.0" text="Pedidos">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="stockButton" layoutX="120.0" layoutY="278.0" mnemonicParsing="false" onMouseClicked="#changeWindowStock" prefHeight="126.0" prefWidth="153.0" text="Stock">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="logoutButton" layoutX="422.0" layoutY="278.0" mnemonicParsing="false" onMouseClicked="#changeWindowLogout" prefHeight="126.0" prefWidth="153.0" text="Cerrar Sesion">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="boxButton" layoutX="422.0" layoutY="88.0" mnemonicParsing="false" onMouseClicked="#changeWindowBox" prefHeight="112.0" prefWidth="153.0" text="Caja">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
