@@ -7,14 +7,39 @@
 
 <AnchorPane prefHeight="520.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.OrderController">
    <children>
-      <TableView fx:id="orderTableView" layoutX="14.0" layoutY="40.0" prefHeight="464.0" prefWidth="513.0">
+      <TableView fx:id="orderTableView" layoutX="14.0" layoutY="31.0" prefHeight="473.0" prefWidth="481.0">
         <columns>
-          <TableColumn fx:id="nOrderTableColumn" prefWidth="75.0" text="Nº Pedido" />
-          <TableColumn fx:id="orderTableColumn" prefWidth="211.0" text="Pedido" />
-            <TableColumn fx:id="hourTableColumn" prefWidth="75.0" text="Hora" />
-            <TableColumn fx:id="stateTableColumn" prefWidth="76.0" text="Estado" />
-            <TableColumn fx:id="priceTableColumn" prefWidth="75.0" text="Precio" />
+          <TableColumn fx:id="nOrderTableColumn" prefWidth="65.0" text="Nº Pedido" />
+          <TableColumn fx:id="orderTableColumn" prefWidth="242.0" text="Pedido" />
+            <TableColumn fx:id="hourTableColumn" minWidth="0.0" prefWidth="40.0" text="Hora" />
+            <TableColumn fx:id="stateTableColumn" prefWidth="92.0" text="Estado">
+               <contextMenu>
+                  <ContextMenu fx:id="orderContextMenu">
+                    <items>
+                      <MenuItem fx:id="preparedContextMenu" mnemonicParsing="false" onAction="#chargeTable" text="Por Preparar" />
+                        <MenuItem fx:id="processedContextMenu" mnemonicParsing="false" onAction="#chargeTable" text="Oido Cocina" />
+                        <MenuItem fx:id="bakingContextMenu" mnemonicParsing="false" onAction="#chargeTable" text="En el horno" />
+                        <MenuItem fx:id="readyContextMenu" mnemonicParsing="false" onAction="#chargeTable" text="Listo" />
+                        <MenuItem fx:id="distributionContextMenu" mnemonicParsing="false" onAction="#chargeTable" text="En Reparto" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu></TableColumn>
+            <TableColumn fx:id="priceTableColumn" prefWidth="41.0" text="Precio" />
         </columns>
       </TableView>
+      <ComboBox fx:id="stateComboBox" layoutX="498.0" layoutY="408.0" prefHeight="25.0" prefWidth="213.0" promptText="Estado" />
+      <Button fx:id="stateButton" layoutX="499.0" layoutY="441.0" mnemonicParsing="false" onMouseClicked="#chargeTable" prefHeight="25.0" prefWidth="213.0" text="Modificar Estado" />
+      <Button fx:id="removeOrder" layoutX="498.0" layoutY="479.0" mnemonicParsing="false" onMouseClicked="#removeOrder" prefHeight="25.0" prefWidth="213.0" text="Completado" />
+      <MenuBar fx:id="orderMenuBar">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+                  <MenuItem fx:id="orderMenuItemLogout" mnemonicParsing="false" onAction="#logoutScreen" text="Cerrar sesion" />
+              <MenuItem fx:id="orderMenuItemReturn" mnemonicParsing="false" onAction="#returnScreen" text="Volver" />
+                  <MenuItem fx:id="orderMenuItemClose" mnemonicParsing="false" onAction="#screenClose" text="Cerrar" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
    </children>
 </AnchorPane>

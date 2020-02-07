@@ -28,5 +28,15 @@
             <Font size="20.0" />
          </font>
       </Button>
+      <MenuBar fx:id="menuMenuBar" layoutY="2.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem fx:id="menuMenuItemLogout" mnemonicParsing="false" onAction="#logoutScreen" text="Cerrar sesion" />
+                  <MenuItem fx:id="menuMenuItemClose" mnemonicParsing="false" onAction="#screenClose" text="Cerrar" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
    </children>
 </AnchorPane>

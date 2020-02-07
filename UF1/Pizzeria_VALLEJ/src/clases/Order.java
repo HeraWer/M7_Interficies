@@ -8,15 +8,19 @@ public class Order {
 	private String date;
 	private String hour;
 	private List<Pizza> pizzas;
+	private String state;
 	private Float price;
+	private String pizzasString = "";
 
-	public Order(int id, String date, String hour, List<Pizza> pizzas, Float price) {
+	public Order(int id, String date, String hour, List<Pizza> pizzas, String state, Float price) {
 		super();
 		this.id = id;
 		this.date = date;
 		this.hour = hour;
 		this.pizzas = pizzas;
 		this.price = price;
+		this.state = state;
+		this.convertPizzaList();
 	}
 
 	public int getId() {
@@ -57,5 +61,27 @@ public class Order {
 
 	public void setPrice(Float price) {
 		this.price = price;
+	}
+
+	public String getPizzasString() {
+		return pizzasString;
+	}
+	
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public void setPizzasString(String pizzasString) {
+		this.pizzasString = pizzasString;
+	}
+
+	public void convertPizzaList() {
+		for (Pizza pizza : pizzas) {
+			pizzasString = pizzasString + pizza.getName() + "\n";
+		}
 	}
 }

@@ -19,8 +19,17 @@
       <Label layoutX="74.0" layoutY="231.0" prefHeight="17.0" prefWidth="76.0" text="Nombre" />
       <Label layoutX="196.0" layoutY="231.0" text="Puesto" />
       <Button fx:id="sendPasswordButton" layoutX="280.0" layoutY="384.0" mnemonicParsing="false" onMouseClicked="#changeWindow" prefHeight="25.0" prefWidth="149.0" text="Enviar" />
-      <TextField fx:id="sendPasswordTextField" layoutX="280.0" layoutY="345.0" promptText="Contraseña" />
       <TextField fx:id="employeePasswordTextField" layoutX="296.0" layoutY="248.0" prefHeight="25.0" prefWidth="100.0" />
       <Label layoutX="296.0" layoutY="231.0" text="Contraseña" />
+      <MenuBar fx:id="loginMenuBar" onDragDetected="#screenClose">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#screenClose" text="Close" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <PasswordField fx:id="sendPasswordField" layoutX="280.0" layoutY="348.0" prefHeight="25.0" prefWidth="149.0" promptText="Contraseña" />
    </children>
 </AnchorPane>
