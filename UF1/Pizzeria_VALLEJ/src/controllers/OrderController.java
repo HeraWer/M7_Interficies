@@ -1,11 +1,11 @@
 package controllers;
 
-import java.awt.ItemSelectable;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+import application.Main;
 import clases.Ingredients;
 import clases.Order;
 import clases.Pizza;
@@ -32,10 +32,11 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+/*
+ * Antes de nada los datos modificados no tienen persistencia ya que no se a pedido como especificacion.
+ */
 public class OrderController implements Initializable {
 
-	ObservableList<Order> obserListOrder = FXCollections.observableArrayList();
-	ObservableList<Order> obserListOrderAux = FXCollections.observableArrayList();
 	ObservableList<String> obserStateComboBoxItems = FXCollections.observableArrayList();
 
 	@FXML
@@ -61,18 +62,12 @@ public class OrderController implements Initializable {
 	@FXML
 	private ContextMenu orderContextMenu;
 
-	private ArrayList<Pizza> orderList;
-	private ArrayList<Ingredients> carbonaraList, buffaloChickenList, pecadoCarnalList, cheesixList, cremozzaBBQList;
 
-	private Pizza p;
-	private Ingredients i;
-	private Order o;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
-		// chargeTable();
-		chargeOrderPizzas();
+
+		
 		chargeStateComboBox();
 		chargeTable();
 
@@ -83,13 +78,12 @@ public class OrderController implements Initializable {
 
 			@Override
 			public void handle(Event event) {
-				// TODO Auto-generated method stub
 
 				// Aqui cambio el estado de los pedidos
 				Order mod = orderTableView.getSelectionModel().getSelectedItem();
 				mod.setState(stateComboBox.getValue());
 
-				obserListOrder.set(orderTableView.getSelectionModel().getSelectedIndex(), mod);
+				Main.obserListOrder.set(orderTableView.getSelectionModel().getSelectedIndex(), mod);
 			}
 		});
 
@@ -106,7 +100,7 @@ public class OrderController implements Initializable {
 				Order mod = orderTableView.getSelectionModel().getSelectedItem();
 				mod.setState(preparedContextMenu.getText());
 
-				obserListOrder.set(orderTableView.getSelectionModel().getSelectedIndex(), mod);
+				Main.obserListOrder.set(orderTableView.getSelectionModel().getSelectedIndex(), mod);
 			}
 		});
 
@@ -118,7 +112,7 @@ public class OrderController implements Initializable {
 				Order mod = orderTableView.getSelectionModel().getSelectedItem();
 				mod.setState(processedContextMenu.getText());
 
-				obserListOrder.set(orderTableView.getSelectionModel().getSelectedIndex(), mod);
+				Main.obserListOrder.set(orderTableView.getSelectionModel().getSelectedIndex(), mod);
 			}
 		});
 
@@ -130,7 +124,7 @@ public class OrderController implements Initializable {
 				Order mod = orderTableView.getSelectionModel().getSelectedItem();
 				mod.setState(bakingContextMenu.getText());
 
-				obserListOrder.set(orderTableView.getSelectionModel().getSelectedIndex(), mod);
+				Main.obserListOrder.set(orderTableView.getSelectionModel().getSelectedIndex(), mod);
 			}
 		});
 
@@ -142,7 +136,7 @@ public class OrderController implements Initializable {
 				Order mod = orderTableView.getSelectionModel().getSelectedItem();
 				mod.setState(readyContextMenu.getText());
 
-				obserListOrder.set(orderTableView.getSelectionModel().getSelectedIndex(), mod);
+				Main.obserListOrder.set(orderTableView.getSelectionModel().getSelectedIndex(), mod);
 			}
 		});
 
@@ -154,7 +148,7 @@ public class OrderController implements Initializable {
 				Order mod = orderTableView.getSelectionModel().getSelectedItem();
 				mod.setState(distributionContextMenu.getText());
 
-				obserListOrder.set(orderTableView.getSelectionModel().getSelectedIndex(), mod);
+				Main.obserListOrder.set(orderTableView.getSelectionModel().getSelectedIndex(), mod);
 			}
 		});
 
@@ -165,7 +159,7 @@ public class OrderController implements Initializable {
 	 */
 	public void removeOrder() {
 
-		obserListOrder.remove(orderTableView.getSelectionModel().getSelectedIndex());
+		Main.obserListOrder.remove(orderTableView.getSelectionModel().getSelectedIndex());
 	}
 
 	/*
@@ -173,13 +167,13 @@ public class OrderController implements Initializable {
 	 */
 	public void chargeTable() {
 
-		nOrderTableColumn.setCellValueFactory(new PropertyValueFactory<Order, String>("Id"));
+		nOrderTableColumn.setCellValueFactory(new PropertyValueFactory<Order, String>("id"));
 		orderTableColumn.setCellValueFactory(new PropertyValueFactory<Order, String>("pizzasString"));
 		hourTableColumn.setCellValueFactory(new PropertyValueFactory<Order, String>("hour"));
 		stateTableColumn.setCellValueFactory(new PropertyValueFactory<Order, String>("state"));
 		priceTableColumn.setCellValueFactory(new PropertyValueFactory<Order, String>("price"));
 
-		orderTableView.setItems(obserListOrder);
+		orderTableView.setItems(Main.obserListOrder);
 
 	}
 
@@ -240,135 +234,5 @@ public class OrderController implements Initializable {
 		}
 	}
 
-	/*
-	 * Metodo para cargar toda la tabla de pedidos.
-	 */
-	public void chargeOrderPizzas() {
-
-		/*
-		 * Creo listas para las pizzas con sus ingredientes.
-		 */
-		carbonaraList = new ArrayList<>();
-		buffaloChickenList = new ArrayList<>();
-		pecadoCarnalList = new ArrayList<>();
-		cheesixList = new ArrayList<>();
-		cremozzaBBQList = new ArrayList<>();
-		orderList = new ArrayList<>();
-
-		/*
-		 * Añado los objetos ingredientes a las listas.
-		 */
-		i = new Ingredients(1, "Mozzarella", 200);
-		carbonaraList.add(i);
-		buffaloChickenList.add(i);
-		pecadoCarnalList.add(i);
-		cheesixList.add(i);
-		cremozzaBBQList.add(i);
-
-		i = new Ingredients(2, "Tomate", 200);
-		carbonaraList.add(i);
-		buffaloChickenList.add(i);
-		pecadoCarnalList.add(i);
-		cheesixList.add(i);
-		cremozzaBBQList.add(i);
-
-		i = new Ingredients(3, "Cebolla", 200);
-		carbonaraList.add(i);
-		buffaloChickenList.add(i);
-		cremozzaBBQList.add(i);
-
-		i = new Ingredients(4, "Salsa Carbonara", 200);
-		carbonaraList.add(i);
-		cremozzaBBQList.add(i);
-
-		i = new Ingredients(5, "Bacon", 200);
-		carbonaraList.add(i);
-		buffaloChickenList.add(i);
-		cremozzaBBQList.add(i);
-
-		i = new Ingredients(6, "Champiñon", 200);
-		carbonaraList.add(i);
-
-		i = new Ingredients(7, "Pollo Bufalo", 300);
-		buffaloChickenList.add(i);
-
-		i = new Ingredients(8, "Salsa BBQ", 100);
-		buffaloChickenList.add(i);
-		cremozzaBBQList.add(i);
-
-		i = new Ingredients(9, "Carne Vacuno", 150);
-		pecadoCarnalList.add(i);
-
-		i = new Ingredients(10, "Pepperoni", 150);
-		pecadoCarnalList.add(i);
-
-		i = new Ingredients(11, "York", 150);
-		pecadoCarnalList.add(i);
-
-		i = new Ingredients(12, "Cheddar", 500);
-		cheesixList.add(i);
-
-		i = new Ingredients(13, "Emmental", 500);
-		cheesixList.add(i);
-
-		i = new Ingredients(14, "Gorgonzola", 500);
-		cheesixList.add(i);
-
-		i = new Ingredients(15, "Que de Cabra", 500);
-		cheesixList.add(i);
-
-		i = new Ingredients(16, "Parmesano", 500);
-		cheesixList.add(i);
-
-		i = new Ingredients(17, "Pollo a la Parrila", 300);
-		cremozzaBBQList.add(i);
-
-		/*
-		 * Creo objetos pizzas
-		 */
-		Pizza p1 = new Pizza(1, "Carbonara", carbonaraList, "Massa Fina", 36, 10.95, 1);
-		Pizza p2 = new Pizza(2, "Buffalo Chicken", buffaloChickenList, "Massa Normal", 36, 14.95, 1);
-		Pizza p3 = new Pizza(3, "Pecado Carnal", pecadoCarnalList, "Massa RollCheese", 36, 14.95, 1);
-		Pizza p4 = new Pizza(4, "Cheesix", cheesixList, "Massa Gorda", 36, 19.95, 1);
-		Pizza p5 = new Pizza(5, "Cremozza BBQ", cremozzaBBQList, "Massa Fina", 36, 12.95, 1);
-
-		/*
-		 * Añado las pizzas a una lista de pedidos que luego rellenara el objeto Order y
-		 * ese objeto estara dentro de un observableList para rellenar la tableView
-		 */
-		orderList.add(p1);
-		orderList.add(p2);
-		orderList.add(p5);
-		o = new Order(1, "1/02/2020", "12:54", orderList, "Por preparar", 40.90f);
-		obserListOrder.add(o);
-		orderList.clear();
-		orderList.add(p2);
-		orderList.add(p3);
-		orderList.add(p4);
-		o = new Order(2, "1/02/2020", "13:54", orderList, "Por preparar", 45.90f);
-		obserListOrder.add(o);
-		orderList.clear();
-		orderList.add(p1);
-		orderList.add(p2);
-		orderList.add(p5);
-		orderList.add(p2);
-		orderList.add(p4);
-		o = new Order(3, "2/02/2020", "14:54", orderList, "Por preparar", 70.90f);
-		obserListOrder.add(o);
-		orderList.clear();
-		orderList.add(p5);
-		orderList.add(p3);
-		orderList.add(p4);
-		o = new Order(4, "2/02/2020", "11:54", orderList, "Por preparar", 50.90f);
-		obserListOrder.add(o);
-		orderList.clear();
-		orderList.add(p3);
-		orderList.add(p2);
-		orderList.add(p5);
-		o = new Order(5, "2/02/2020", "15:54", orderList, "Por preparar", 33.90f);
-		obserListOrder.add(o);
-		orderList.clear();
-
-	}
-
+	
 }

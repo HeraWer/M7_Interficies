@@ -10,6 +10,22 @@
       <link>http://www.eclipse.org</link>
     </image>
     <item>
+      <title><![CDATA[Sparkplug: Standardizing Industrial IoT Communications]]></title>
+      <link><![CDATA[https://blogs.eclipse.org/post/mike-milinkovich/sparkplug-standardizing-industrial-iot-communications]]></link>
+      <description><![CDATA[With the launch this week of the Sparkplug Working Group, we’re bringing together the industry leaders and technologies needed to drive...]]></description>
+      <pubDate>Thu, 06 Feb 2020 13:40:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+    <item>
+      <title><![CDATA[The Eclipse Foundation Launches the Sparkplug Working Group to Bring Device Communications Standardization to the Industrial Internet of Things and Industrial Automation]]></title>
+      <link><![CDATA[https://www.globenewswire.com/news-release/2020/02/03/1978911/0/en/The-Eclipse-Foundation-Launches-the-Sparkplug-Working-Group-to-Bring-Device-Communications-Standardization-to-the-Industrial-Internet-of-Things-and-Industrial-Automation.html]]></link>
+      <description><![CDATA[Founding members Chevron, Canary Labs, Cirrus Link Solutions, HiveMQ, Inductive Automation, and ORing are defining an open standard specification to create interoperable MQTT IIoT solutions]]></description>
+      <pubDate>Tue, 04 Feb 2020 8:00:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>1</pressrelease>
+    </item>
+    <item>
       <title><![CDATA[The Eclipse Foundation Announces the CN4J Day 2020 Event for Building Enterprise Java on Kubernetes]]></title>
       <link><![CDATA[https://jakarta.ee/news/announcements/2020/01/28/the-eclipse-foundation-announces-the-cn4j-day-2020-event-for-building-enterprise-java-on-kubernetes/]]></link>
       <description><![CDATA[Today the Eclipse Foundation announced the launch of the Cloud Native for Java (CN4J) Day event, a full-day of expert talks, demos, and thought-provoking sessions focused on enterprise applications implemented using open source vendor-neutral Jakarta EE (successor of Java EE) and Eclipse MicroProfile specifications on Kubernetes.]]></description>

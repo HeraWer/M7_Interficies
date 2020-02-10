@@ -28,8 +28,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class LoginController implements Initializable {
-
-	ObservableList<Employee> obserListEmployee = FXCollections.observableArrayList();
+	
 
 	@FXML
 	private ListView<Employee> employeeListView;
@@ -56,7 +55,7 @@ public class LoginController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
 		System.out.println("Programa iniciado");
-		chargeEmployee();
+		employeeListView.getItems().addAll(Main.obserListEmployee);
 		sendPasswordButton = new Button();
 		sendPasswordButton.setOnMouseClicked(new EventHandler<Event>() {
 
@@ -69,54 +68,19 @@ public class LoginController implements Initializable {
 		});
 	}
 
-	/*
-	 * Metodo para inflar la lista con empleados.
-	 */
-	public void chargeEmployee() {
-
-		obserListEmployee.clear();
-
-		Employee e = new Employee();
-		e = new Employee(1, "Jonatan", "Vendedor", "1234");
-		obserListEmployee.add(e);
-		e = new Employee(2, "Sergio", "Vendedor", "1234");
-		obserListEmployee.add(e);
-		e = new Employee(3, "Adrian", "Vendedor", "1234");
-		obserListEmployee.add(e);
-		e = new Employee(4, "Julio", "Encargado", "1234");
-		obserListEmployee.add(e);
-		e = new Employee(5, "Antonio", "Repartidor", "1234");
-		obserListEmployee.add(e);
-		e = new Employee(6, "Juan Carlos", "Cocinero", "1234");
-		obserListEmployee.add(e);
-		e = new Employee(7, "Marc", "Repartidor", "1234");
-		obserListEmployee.add(e);
-		e = new Employee(8, "Daniel", "Cocinero", "1234");
-		obserListEmployee.add(e);
-		e = new Employee(9, "Erik", "Encargado", "1234");
-		obserListEmployee.add(e);
-		e = new Employee(10, "Lidia", "Cocinera", "1234");
-		obserListEmployee.add(e);
-		e = new Employee(11, "Susana", "Repartidora", "1234");
-		obserListEmployee.add(e);
-		e = new Employee(12, "Angela", "Encargada", "1234");
-		obserListEmployee.add(e);
-		employeeListView.getItems().addAll(obserListEmployee);
-		System.out.println("Empleados cargados");
-
-	}
+	
 	
 	
 	/*
 	 * Metodo para añadir nuevos empleados.
 	 */
 	public void addEmployee() {
-		int id = obserListEmployee.size() + 1;
-		obserListEmployee.clear();
+		int id = Main.obserListEmployee.size() + 1;
+		//Main.obserListEmployee.clear();
 		Employee e = new Employee(id, employeeNameTextField.getText(), employeePositionTextField.getText(),
 				employeePasswordTextField.getText());
-		obserListEmployee.add(e);
-		employeeListView.getItems().addAll(obserListEmployee);
+		Main.obserListEmployee.add(e);
+		employeeListView.getItems().addAll(Main.obserListEmployee);
 		System.out.println("Nuevo empleado añadido");
 
 	}
