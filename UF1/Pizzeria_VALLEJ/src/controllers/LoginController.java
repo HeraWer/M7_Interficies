@@ -43,10 +43,10 @@ public class LoginController implements Initializable {
 	private MenuBar loginMenuBar;
 
 	@FXML
-	private TextField employeeNameTextField, employeePositionTextField, employeePasswordTextField;
+	private TextField employeeNameTextField, employeePositionTextField;
 	
 	@FXML
-	private PasswordField sendPasswordField; 
+	private PasswordField sendPasswordField, employeePasswordTextField; 
 
 	/*
 	 * Boton para comprobar la contraseña y saltar de escena.

@@ -20,7 +20,6 @@ public class Main extends Application {
 	public static ObservableList<Order> obserListOrder = FXCollections.observableArrayList();
 	public static ObservableList<Ingredients> obserListIngredients = FXCollections.observableArrayList();
 	
-	private ArrayList<Ingredients> ingredientsList;
 	private ArrayList<Pizza> orderList;
 	private ArrayList<Ingredients> carbonaraList, buffaloChickenList, pecadoCarnalList, cheesixList, cremozzaBBQList;
 	
@@ -32,7 +31,9 @@ public class Main extends Application {
 
 		try {
 			chargeEmployee();
+			System.out.println("Empleados cargados");
 			chargeOrderPizzas();
+			System.out.println("Pizzas cargadas");
 			Parent root = FXMLLoader.load(getClass().getResource("../views/Login.fxml"));
 			Scene scene = new Scene(root, 720, 520);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());

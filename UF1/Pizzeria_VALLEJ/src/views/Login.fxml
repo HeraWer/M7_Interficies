@@ -15,13 +15,12 @@
          </font></Label>
       <Button fx:id="addButtonEmployee" layoutX="440.0" layoutY="248.0" mnemonicParsing="false" onMouseClicked="#addEmployee" prefHeight="25.0" prefWidth="194.0" text="Añadir Empleado" />
       <TextField fx:id="employeeNameTextField" layoutX="74.0" layoutY="248.0" prefHeight="25.0" prefWidth="110.0" />
-      <TextField fx:id="employeePositionTextField" layoutX="194.0" layoutY="248.0" prefHeight="25.0" prefWidth="94.0" />
+      <TextField fx:id="employeePositionTextField" layoutX="202.0" layoutY="248.0" prefHeight="25.0" prefWidth="94.0" />
       <Label layoutX="74.0" layoutY="231.0" prefHeight="17.0" prefWidth="76.0" text="Nombre" />
-      <Label layoutX="196.0" layoutY="231.0" text="Puesto" />
+      <Label layoutX="202.0" layoutY="231.0" text="Puesto" />
       <Button fx:id="sendPasswordButton" layoutX="280.0" layoutY="384.0" mnemonicParsing="false" onMouseClicked="#changeWindow" prefHeight="25.0" prefWidth="149.0" text="Enviar" />
-      <TextField fx:id="employeePasswordTextField" layoutX="296.0" layoutY="248.0" prefHeight="25.0" prefWidth="100.0" />
-      <Label layoutX="296.0" layoutY="231.0" text="Contraseña" />
-      <MenuBar fx:id="loginMenuBar" onDragDetected="#screenClose">
+      <Label layoutX="313.0" layoutY="231.0" text="Contraseña" />
+      <MenuBar fx:id="loginMenuBar" onDragDetected="#screenClose" prefHeight="25.0" prefWidth="720.0">
         <menus>
           <Menu mnemonicParsing="false" text="Archivo">
             <items>
@@ -31,5 +30,6 @@
         </menus>
       </MenuBar>
       <PasswordField fx:id="sendPasswordField" layoutX="280.0" layoutY="348.0" prefHeight="25.0" prefWidth="149.0" promptText="Contraseña" />
+      <PasswordField fx:id="employeePasswordTextField" layoutX="313.0" layoutY="248.0" prefHeight="25.0" prefWidth="110.0" />
    </children>
 </AnchorPane>

@@ -1,14 +1,11 @@
 package controllers;
 
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
 import application.Main;
-import clases.Ingredients;
 import clases.Order;
-import clases.Pizza;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -56,7 +53,7 @@ public class OrderController implements Initializable {
 	private MenuBar orderMenuBar;
 
 	@FXML
-	private MenuItem orderMenuItemReturn, orderMenuItemClose, preparedContextMenu, processedContextMenu,
+	private MenuItem preparedContextMenu, processedContextMenu,
 			bakingContextMenu, readyContextMenu, distributionContextMenu;
 
 	@FXML

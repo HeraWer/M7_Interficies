@@ -9,16 +9,27 @@
 
 <AnchorPane prefHeight="520.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StockController">
    <children>
-      <Label fx:id="employeeLabel" layoutX="257.0" layoutY="14.0" prefHeight="39.0" prefWidth="206.0" text="Inventario Ingredientes" textAlignment="CENTER">
+      <Label fx:id="employeeLabel" layoutX="258.0" layoutY="34.0" prefHeight="39.0" prefWidth="206.0" text="Inventario Ingredientes" textAlignment="CENTER">
          <font>
             <Font size="20.0" />
          </font></Label>
-      <TableView fx:id="ingredientsTableView" layoutX="19.0" layoutY="63.0" prefHeight="443.0" prefWidth="683.0">
+      <TableView fx:id="ingredientsTableView" layoutX="19.0" layoutY="90.0" prefHeight="416.0" prefWidth="683.0">
         <columns>
           <TableColumn fx:id="idIngredientsTableColumn" prefWidth="124.0" text="Id" />
           <TableColumn fx:id="nameIngredientsTableColumn" prefWidth="446.0" text="Nombre" />
             <TableColumn fx:id="stockIngredientsTableColumn" minWidth="0.0" prefWidth="112.0" text="Stock" />
         </columns>
       </TableView>
+      <MenuBar fx:id="stockMenuBar" layoutX="1.0" prefHeight="25.0" prefWidth="720.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Archivo">
+               <items>
+                  <MenuItem fx:id="stockMenuItemLogout" mnemonicParsing="false" onAction="#logoutScreen" text="Cerrar sesion" />
+                  <MenuItem fx:id="stockMenuItemReturn" mnemonicParsing="false" onAction="#returnScreen" text="Volver" />
+                  <MenuItem fx:id="stockMenuItemClose" mnemonicParsing="false" onAction="#screenClose" text="Cerrar" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
    </children>
 </AnchorPane>

@@ -30,7 +30,7 @@
       <ComboBox fx:id="stateComboBox" layoutX="498.0" layoutY="408.0" prefHeight="25.0" prefWidth="213.0" promptText="Estado" />
       <Button fx:id="stateButton" layoutX="499.0" layoutY="441.0" mnemonicParsing="false" onMouseClicked="#chargeTable" prefHeight="25.0" prefWidth="213.0" text="Modificar Estado" />
       <Button fx:id="removeOrder" layoutX="498.0" layoutY="479.0" mnemonicParsing="false" onMouseClicked="#removeOrder" prefHeight="25.0" prefWidth="213.0" text="Completado" />
-      <MenuBar fx:id="orderMenuBar">
+      <MenuBar fx:id="orderMenuBar" prefHeight="25.0" prefWidth="720.0">
         <menus>
           <Menu mnemonicParsing="false" text="Archivo">
             <items>

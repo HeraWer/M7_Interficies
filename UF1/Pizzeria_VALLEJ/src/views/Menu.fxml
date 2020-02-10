@@ -28,7 +28,7 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <MenuBar fx:id="menuMenuBar" layoutY="2.0">
+      <MenuBar fx:id="menuMenuBar" prefHeight="25.0" prefWidth="720.0">
         <menus>
           <Menu mnemonicParsing="false" text="Archivo">
             <items>
