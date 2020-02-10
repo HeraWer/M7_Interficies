@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.swing.JInternalFrame"/>
-<fullyQualifiedTypeName name="java.awt.Toolkit"/>
-<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
-<fullyQualifiedTypeName name="java.awt.event.ActionEvent"/>
-<fullyQualifiedTypeName name="examen_uf1.DatosAlumnos"/>
-<fullyQualifiedTypeName name="java.awt.LayoutManager"/>
-<fullyQualifiedTypeName name="java.awt.GridLayout"/>
-<fullyQualifiedTypeName name="javax.swing.JFrame"/>
 <fullyQualifiedTypeName name="javax.swing.JPanel"/>
 <fullyQualifiedTypeName name="javax.swing.DefaultListModel"/>
 <fullyQualifiedTypeName name="java.awt.List"/>
@@ -60,4 +52,12 @@
 <fullyQualifiedTypeName name="javafx.scene.control.TableView"/>
 <fullyQualifiedTypeName name="javafx.scene.control.TableColumn"/>
 <fullyQualifiedTypeName name="javafx.scene.control.cell.PropertyValueFactory"/>
+<fullyQualifiedTypeName name="javafx.animation.Timeline"/>
+<fullyQualifiedTypeName name="javafx.animation.KeyValue"/>
+<fullyQualifiedTypeName name="javafx.animation.Interpolator"/>
+<fullyQualifiedTypeName name="javafx.animation.KeyFrame"/>
+<fullyQualifiedTypeName name="java.time.Duration"/>
+<fullyQualifiedTypeName name="javafx.util.Duration"/>
+<fullyQualifiedTypeName name="javafx.scene.layout.StackPane"/>
+<fullyQualifiedTypeName name="javafx.scene.layout.AnchorPane"/>
 </qualifiedTypeNameHistroy>

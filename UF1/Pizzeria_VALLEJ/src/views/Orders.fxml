@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="520.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.OrderController">
+<AnchorPane id="anchorOrders" prefHeight="520.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.OrderController">
    <children>
-      <TableView fx:id="orderTableView" layoutX="14.0" layoutY="31.0" prefHeight="473.0" prefWidth="481.0">
+      <TableView fx:id="orderTableView" focusTraversable="false" layoutX="14.0" layoutY="31.0" prefHeight="473.0" prefWidth="481.0">
         <columns>
           <TableColumn fx:id="nOrderTableColumn" prefWidth="65.0" text="Nº Pedido" />
           <TableColumn fx:id="orderTableColumn" prefWidth="242.0" text="Pedido" />

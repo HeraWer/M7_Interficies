@@ -5,9 +5,7 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 import application.Main;
 import clases.Employee;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
+
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -28,7 +26,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class LoginController implements Initializable {
-	
 
 	@FXML
 	private ListView<Employee> employeeListView;
@@ -38,15 +35,15 @@ public class LoginController implements Initializable {
 
 	@FXML
 	private Button addButtonEmployee, sendPasswordButton;
-	
+
 	@FXML
 	private MenuBar loginMenuBar;
 
 	@FXML
 	private TextField employeeNameTextField, employeePositionTextField;
-	
+
 	@FXML
-	private PasswordField sendPasswordField, employeePasswordTextField; 
+	private PasswordField sendPasswordField, employeePasswordTextField;
 
 	/*
 	 * Boton para comprobar la contraseña y saltar de escena.
@@ -68,15 +65,12 @@ public class LoginController implements Initializable {
 		});
 	}
 
-	
-	
-	
 	/*
 	 * Metodo para añadir nuevos empleados.
 	 */
 	public void addEmployee() {
 		int id = Main.obserListEmployee.size() + 1;
-		//Main.obserListEmployee.clear();
+		// Main.obserListEmployee.clear();
 		Employee e = new Employee(id, employeeNameTextField.getText(), employeePositionTextField.getText(),
 				employeePasswordTextField.getText());
 		Main.obserListEmployee.add(e);
@@ -95,14 +89,16 @@ public class LoginController implements Initializable {
 			try {
 				Parent root = FXMLLoader.load(getClass().getResource("../views/Menu.fxml"));
 				Scene scene = new Scene(root, 720, 520);
+				scene.getStylesheets().add(getClass().getResource("../application/application.css").toExternalForm());
 				Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 				primaryStage.setScene(scene);
 				primaryStage.show();
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+
 		} else {
-			
+
 			/*
 			 * Dialogo de contraseña erronea
 			 */
@@ -115,7 +111,7 @@ public class LoginController implements Initializable {
 			System.out.println("Contraseña erronea");
 		}
 	}
-	
+
 	/*
 	 * Metodo para cerrar la ventana por el menuBar con un alert para confirmar
 	 */
@@ -136,9 +132,9 @@ public class LoginController implements Initializable {
 	 * Metodo para saber si la contraseña es correcta o no.
 	 */
 	public Boolean resultPassword(String password) {
-		
-		System.out.println("Comprobando contraseña");
-		
+
+		System.out.println("Comprobando contraseña...");
+
 		Boolean result = false;
 		if (!employeeListView.getSelectionModel().isEmpty()) {
 			String p = employeeListView.getSelectionModel().getSelectedItem().getPassword();

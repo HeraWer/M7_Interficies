@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="520.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuController">
+<AnchorPane id="anchorMenu" prefHeight="520.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuController">
    <children>
       <Button fx:id="orderButton" layoutX="120.0" layoutY="88.0" mnemonicParsing="false" onMouseClicked="#changeWindowOrder" prefHeight="112.0" prefWidth="153.0" text="Pedidos">
          <font>

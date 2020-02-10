@@ -191,6 +191,7 @@ public class OrderController implements Initializable {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("../views/Menu.fxml"));
 			Scene scene = new Scene(root, 720, 520);
+			scene.getStylesheets().add(getClass().getResource("../application/application.css").toExternalForm());
 			Stage primaryStage = (Stage) orderMenuBar.getScene().getWindow();
 			primaryStage.setScene(scene);
 			primaryStage.show();
@@ -207,6 +208,7 @@ public class OrderController implements Initializable {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("../views/Login.fxml"));
 			Scene scene = new Scene(root, 720, 520);
+			scene.getStylesheets().add(getClass().getResource("../application/application.css").toExternalForm());
 			Stage primaryStage = (Stage) orderMenuBar.getScene().getWindow();
 			primaryStage.setScene(scene);
 			primaryStage.show();

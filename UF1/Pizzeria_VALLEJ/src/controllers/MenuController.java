@@ -81,6 +81,7 @@ public class MenuController implements Initializable {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("../views/Orders.fxml"));
 			Scene scene = new Scene(root, 720, 520);
+			scene.getStylesheets().add(getClass().getResource("../application/application.css").toExternalForm());
 			Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 			primaryStage.setScene(scene);
 			primaryStage.show();
@@ -94,6 +95,7 @@ public class MenuController implements Initializable {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("../views/Stock.fxml"));
 			Scene scene = new Scene(root, 720, 520);
+			scene.getStylesheets().add(getClass().getResource("../application/application.css").toExternalForm());
 			Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 			primaryStage.setScene(scene);
 			primaryStage.show();
@@ -107,6 +109,7 @@ public class MenuController implements Initializable {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("../views/Box.fxml"));
 			Scene scene = new Scene(root, 720, 520);
+			scene.getStylesheets().add(getClass().getResource("../application/application.css").toExternalForm());
 			Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 			primaryStage.setScene(scene);
 			primaryStage.show();
@@ -120,6 +123,7 @@ public class MenuController implements Initializable {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("../views/Login.fxml"));
 			Scene scene = new Scene(root, 720, 520);
+			scene.getStylesheets().add(getClass().getResource("../application/application.css").toExternalForm());
 			Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 			primaryStage.setScene(scene);
 			primaryStage.show();
@@ -136,6 +140,7 @@ public class MenuController implements Initializable {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("../views/Login.fxml"));
 			Scene scene = new Scene(root, 720, 520);
+			scene.getStylesheets().add(getClass().getResource("../application/application.css").toExternalForm());
 			Stage primaryStage = (Stage) menuMenuBar.getScene().getWindow();
 			primaryStage.setScene(scene);
 			primaryStage.show();
