@@ -5,7 +5,7 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 import application.Main;
 import clases.Employee;
-
+import javafx.application.*;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -25,7 +25,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class LoginController implements Initializable {
+public class LoginController extends Application implements Initializable  {
 
 	@FXML
 	private ListView<Employee> employeeListView;
@@ -145,4 +145,15 @@ public class LoginController implements Initializable {
 		return result;
 	}
 
+	public void openReport() {
+
+			HostServices hostServices = getHostServices();
+			hostServices.showDocument(System.getProperty("user.dir") + "\\src\\Reports\\EmpleadosReport.pdf");
+	}
+
+	@Override
+	public void start(Stage arg0) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
 }

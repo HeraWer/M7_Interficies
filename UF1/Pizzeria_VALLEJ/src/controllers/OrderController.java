@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 
 import application.Main;
 import clases.Order;
+import javafx.application.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -32,7 +33,7 @@ import javafx.stage.Stage;
 /*
  * Antes de nada los datos modificados no tienen persistencia ya que no se a pedido como especificacion.
  */
-public class OrderController implements Initializable {
+public class OrderController extends Application implements Initializable {
 
 	ObservableList<String> obserStateComboBoxItems = FXCollections.observableArrayList();
 
@@ -233,5 +234,17 @@ public class OrderController implements Initializable {
 		}
 	}
 
+	public void openReport() {
+		
+		System.out.println("PEPE");
+		HostServices hostServices = getHostServices();
+		hostServices.showDocument(System.getProperty("user.dir") + "\\src\\Reports\\PedidosReport.pdf");
+	}
+
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }

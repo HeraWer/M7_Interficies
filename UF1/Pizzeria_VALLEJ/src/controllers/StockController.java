@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 
 import application.Main;
 import clases.Ingredients;
+import javafx.application.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -24,7 +25,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-public class StockController implements Initializable{
+public class StockController extends Application implements Initializable{
 	
 	@FXML
 	private TableView<Ingredients> ingredientsTableView;
@@ -101,5 +102,17 @@ public class StockController implements Initializable{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void openReport() {
+		
+		HostServices hostServices = getHostServices();
+		hostServices.showDocument(System.getProperty("user.dir") + "\\src\\Reports\\IngredientesReport.pdf");
+	}
+
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
 }

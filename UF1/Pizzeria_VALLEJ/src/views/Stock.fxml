@@ -31,5 +31,6 @@
             </Menu>
          </menus>
       </MenuBar>
+      <Button id="button" fx:id="stockReport" layoutX="554.0" layoutY="41.0" mnemonicParsing="false" onMouseClicked="#openReport" prefHeight="25.0" prefWidth="152.0" text="Abrir Informe" />
    </children>
 </AnchorPane>
